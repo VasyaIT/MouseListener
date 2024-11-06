@@ -23,7 +23,8 @@
 	</head>
 	<body>
 		<script>
-			let socket = new WebSocket('ws://localhost:4567/ws');
+			const wsUrl = 'ws://localhost:4567/ws';
+			let socket = new WebSocket(wsUrl);
 			let connected = false;
 			let cursors = {};
 			socket.onopen = () => {
